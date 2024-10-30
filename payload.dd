@@ -4,7 +4,7 @@ DELAY 250
 STRING ubuntu
 ENTER
 DELAY 1000
-STRING cd && nano ~/sample.sh
+STRING nano ~/sample.sh
 ENTER
 STRING rm ~/sample.sh
 ENTER
